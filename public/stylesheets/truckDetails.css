@@ -1,0 +1,119 @@
+body {
+	font: 14px/19px 'Open Sans', Arial, sans-serif;
+	color: #636363;
+	background: #fff;
+}
+
+#header {
+	background: #00c0f2;
+	height: 31px;
+	padding: 18px 0;
+	color: #FFFFFF;
+	font-size: 30px;
+	text-align: center;
+}
+
+#smallHeader {
+	background: #00c0f2;
+	height: 5px;
+	padding: 18px 0;
+	color: #FFFFFF;
+	font-size: 30px;
+	text-align: center;
+	margin-top: 35px
+}
+
+#buttons {
+	text-align: center;
+}
+
+h3 {
+	color: #00abe5;
+	margin: 0 0 50px 0;
+}
+
+ul {
+	list-style: none;
+}
+
+input {
+	border: 1px solid #E5E5E5;
+	color: #000;
+	font: 14px/22px 'Open Sans', Arial, sans-serif;
+	outline: 0 none;
+	/*float: left;*/
+	border-radius: 5px;
+	-webkit-writing-mode: horizontal-tb;
+}
+
+p {
+	margin: 0;
+	margin-top: 20px;
+	cursor: hand;
+	font-size: 25px;
+	color: #636363;
+}
+
+input[type="text"]:hover,input[type="password"]:hover {
+	border-color: #00abe5;
+}
+
+#main {
+	width: 100%;
+}
+
+.textbox_sml {
+	margin-top: 12px;
+	width: 305px;
+	padding: 6px;
+	background-color: #fff;
+	border-radius: 5px;
+}
+
+.btn {
+	color: #fff;
+	background: #f5852b;
+	height: 33px;
+	cursor: pointer;
+	display: block;
+	width: 80px;
+	padding: 0 10px;
+	margin-left: 40px;
+	font-size: 16px;
+}
+
+.btn:hover,.dashboard_button_class:hover {
+	background: #189acf;
+}
+
+#dashboard {
+	width: 55%;
+	margin: 20px auto;
+	text-align: left;
+	border: 2px solid #005880;
+	box-shadow: 5px 5px 5px #232231;
+	height: 1250px;
+	margin-left: 400px;
+}
+
+.dashboard_button_class {
+	cursor: pointer;
+	margin-top: 100px;
+	width: 180px;
+	height: 67px;
+	font-size: 27px;
+	background: #f5852b;
+	margin-left: 20px;
+	color: #fff;
+}
+
+#addTruckForm, #deleteTruckDiv, #editTruckForm, #editSelectTruck{
+	margin-top: 80px;
+	margin-left: 80px
+}
+
+.error {
+	color: red;
+	font-size: 16px;
+	border-color: red;
+}

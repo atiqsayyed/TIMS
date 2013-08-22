@@ -1,0 +1,179 @@
+body {
+	font: 14px/19px 'Open Sans', Arial, sans-serif;
+	color: #636363;
+	background: #fff;
+}
+
+#header {
+	background: #00c0f2;
+	height: 31px;
+	padding: 18px 0;
+	color: #FFFFFF;
+	font-size: 30px;
+	text-align: center;
+}
+
+h3 {
+	color: #00abe5;
+	margin: 0 0 50px 0;
+}
+
+input {
+	border: 1px solid #E5E5E5;
+	color: #000;
+	font: 14px/22px 'Open Sans', Arial, sans-serif;
+	outline: 0 none;
+	/*float: left;*/
+	border-radius: 5px;
+	-webkit-writing-mode: horizontal-tb;
+}
+
+p {
+	margin: 0;
+	margin-top: 20px;
+	cursor: hand;
+	font-size: 25px;
+	color: #636363;
+}
+
+#Login {
+	min-height: 350px;
+	width: 1000px;
+	padding: 10px 10px 0 10px;
+	float: left;
+	margin-left: 220px;
+	margin-top: 60px;
+	font-size: 26px;
+}
+
+input[type="text"]:hover,input[type="password"]:hover {
+	border-color: #00abe5;
+}
+
+#main {
+	width: 100%;
+}
+
+ul {
+	list-style: none;
+}
+
+.textbox_sml {
+	margin-top: 12px;
+	width: 305px;
+	padding: 6px;
+	background-color: #fff;
+	border-radius: 5px;
+}
+
+td,th {
+	margin-top: 12px;
+	width: 114px;
+	padding: 6px;
+	background-color: #fff;
+	border-radius: 5px;
+}
+
+.tableBtn {
+	background: #f5852b;
+	color: #fff;
+	padding: 0 10px;
+	margin-left: 40px;
+	font-size: 16px;
+	text-align: center;
+}
+
+.btn {
+	color: #fff;
+	background: #f5852b;
+	height: 33px;
+	cursor: pointer;
+	display: block;
+	width: 80px;
+	padding: 0 10px;
+	margin-left: 40px;
+	font-size: 16px;
+}
+
+.btn:hover,.dashboard_button_class:hover {
+	background: #189acf;
+}
+
+#dashboard,#dailyEntryForm {
+	width: 55%;
+	margin: 20px auto;
+	text-align: left;
+	border: 2px solid #005880;
+	box-shadow: 5px 5px 5px #232231;
+	height: 1250px;
+	margin-left: 400px;
+}
+
+.dashboard_button_class {
+	cursor: pointer;
+	margin-top: 100px;
+	width: 180px;
+	height: 67px;
+	font-size: 27px;
+	background: #f5852b;
+	color: #fff;
+}
+
+#billingEntry {
+	width: 68%;
+	margin: 20px auto;
+	text-align: left;
+	border: 2px solid #005880;
+	box-shadow: 5px 5px 5px #232231;
+	height: 1250px;
+	margin-left: 284px;
+	font-size: 20px;
+}
+
+#dailyEntryForm label {
+	margin-right: 70px;
+	font-size: 25px;
+}
+
+#dailyEntryForm li {
+	margin-top: 30px;
+}
+
+.labelClass {
+	width: 35%;
+	float: left;
+}
+
+#dailyEntrySubmit {
+	margin-left: 290px;
+	margin-top: 60px;
+}
+
+.total_class {
+	margin-top: 12px;
+	width: 114px;
+	padding: 6px;
+	background-color: #fff;
+	border-radius: 5px;
+}
+
+#forgotPassword {
+	font: 15px 'Open Sans', Arial, sans-serif;
+	color: #00abe5;
+	margin-left: 36px;
+	padding-top: 5px;
+	cursor: pointer;
+}
+
+.error {
+	color: red;
+	font-size: 16px;
+	border-color: red;
+}
+
+.tableBtn img {
+	height: 25px;
+	float: left;
+	padding-left: 19px;
+	cursor: pointer;
+}

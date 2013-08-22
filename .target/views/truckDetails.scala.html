@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href='@routes.Assets.at("stylesheets/truckDetails.css")'
+	rel="stylesheet">
+
+<script src='@routes.Assets.at("javascripts/jquery1.9.js")'
+	type='text/javascript'></script>
+		
+<script src='@routes.Assets.at("javascripts/jquery.validate.js")'
+	 type='text/javascript'></script>
+<script src='@routes.Assets.at("javascripts/truckDetails.js")'
+	type='text/javascript'></script>
+
+
+<title>Manage Truck</title>
+</head>
+<body>
+
+	<div id="header">Manage Truck</div>
+	<div id="dashboard">
+		<div id="buttons">
+			<input type="button" value="Add Trucks" id="addTruckButton" class="dashboard_button_class"> 
+			<input type="button" value="Delete Trucks" id="deleteTruckButton" class="dashboard_button_class"> 
+			<input type="button" value="Edit Trucks" id="editTruckButton" class="dashboard_button_class">
+		</div>
+		<div id="smallHeader"></div>
+		<div>
+			<form id="addTruckForm">
+				<ul>
+					<li>
+						<p class="labelClass">Truck Number</p> <input type="text" name="truckNo" class="textbox_sml" id="truckNo" />
+					</li>
+					<li>
+						<p class="labelClass">Driver</p> <input type="text" name="driver" class="textbox_sml" id="driver" />
+					</li>
+					<li>
+						<p class="labelClass">Owner</p> <input type="text" name="owner" class="textbox_sml" id="owner" />
+					</li>
+					<li>
+						<p class="labelClass">Insurance Number</p> <input type="text"
+						name="insuranceNo" class="textbox_sml" id="insuranceNo" />
+					</li>
+				</ul>
+				<p>	<input type="submit" value="Add" class="btn" id="addTruckSubmit" /></p>
+			</form>
+            <div id="deleteTruckDiv">
+               <p class="labelClass">Truck Number</p> 
+               <select id="truckOption" name="truckNo" class="textbox_sml">	
+               <option>Select Truck</option> </select>
+               <p>	<input type="submit" value="Delete" class="btn" id="deleteTruckSubmit" /></p>
+               
+            </div>
+            <div id="editSelectTruck">
+               <p class="labelClass">Truck Number</p> 
+               <select id="editTruckOption" name="truckNo" class="textbox_sml">	
+               <option>Select Truck</option> </select>
+               <p>	<input type="submit" value="Get" class="btn" id="editTruckSubmit" /></p>
+            
+            </div>
+            
+            <form id="editTruckForm">
+				<ul>
+					<li>
+						<p class="labelClass">Truck Number</p> <input type="text" name="truckNo" class="textbox_sml" id="editTruckNo" />
+					</li>
+					<li>
+						<p class="labelClass">Driver</p> <input type="text" name="driver" class="textbox_sml" id="editDriver" />
+					</li>
+					<li>
+						<p class="labelClass">Owner</p> <input type="text" name="owner" class="textbox_sml" id="editOwner" />
+					</li>
+					<li>
+						<p class="labelClass">Insurance Number</p> <input type="text"
+						name="insuranceNo" class="textbox_sml" id="editInsuranceNo" />
+					</li>
+				</ul>
+				<p>	<input type="submit" value="Update" class="btn" id="updateTruckSubmit" /></p>
+			</form>
+		</div>
+	</div>
+
+
+</body>
+</html>
+

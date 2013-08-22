@@ -1,0 +1,31 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET    /                                       controllers.Application.index
+
+
+# Entries       
+GET    /entries                                controllers.Application.entries
+GET    /entries/getEntry/:id                   controllers.Application.getEntry(id:Int)
+POST   /entries                                controllers.Application.newEntry
+POST   /entries/delete/:id                     controllers.Application.deleteEntry(id: Int)
+POST   /entries/update/:id                     controllers.Application.updateEntry(id: Int)  
+
+#Billing
+GET    /billing                                controllers.Application.billing     
+GET    /billing/:truckNo/:startDate/:endDate   controllers.Application.generateBill(truckNo:String, startDate:String, endDate:String)
+
+
+#trucks
+GET    /manageTruck                            controllers.TruckController.index
+GET    /truck/truckNos                         controllers.TruckController.truckNos
+POST   /truck/addTruck                         controllers.TruckController.addTruck
+GET    /truck/getTruck/:truckNo                controllers.TruckController.getTruck(truckNo:String)
+POST   /truck/delete/:truckNo                  controllers.TruckController.deleteTruck(truckNo: String)
+POST   /truck/update/:truckNo                  controllers.TruckController.updateTruck(truckNo: String)
+
+
+# Map static resources from the /public folder to the /assets URL path
+GET    /assets/*file                           controllers.Assets.at(path="/public", file)

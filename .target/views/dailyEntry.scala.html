@@ -1,0 +1,118 @@
+@* dailyEntry Template File *@ @(taskForm: Form[models.DailyEntry])
+
+@import helper._
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link href='@routes.Assets.at("stylesheets/ms.css")' rel="stylesheet">
+<link href='@routes.Assets.at("stylesheets/jquerycss.css")'
+	rel="stylesheet">
+
+<script src='@routes.Assets.at("javascripts/jquery1.9.js")'
+	type='text/javascript'></script>
+<script src='@routes.Assets.at("javascripts/dailyEntry.js")'
+	type='text/javascript'></script>
+<script src='@routes.Assets.at("javascripts/jqueryui.js")'
+	type='text/javascript'></script>
+	<script src='@routes.Assets.at("javascripts/jquery.validate.js")'
+	type='text/javascript'></script>
+
+<title>Daily Entry</title>
+</head>
+<body>
+	<div id="dailyEntry">
+		<div id="header">Daily Entry</div>
+		<form id="dailyEntryForm">
+			<ul>
+
+				<li>
+					<p class="labelClass">Truck Number</p> @select(
+					taskForm("truckNo"), options(),'class -> "textbox_sml",'id -> "truckOptions",
+					'_label -> "" ,'_showConstraints -> false)
+				</li>
+				<li>
+					<p class="labelClass">Source</p>
+					@inputText(taskForm("source"),'class -> "textbox_sml", '_label ->
+					"",'_showConstraints -> false)
+				</li>
+				<li>
+					<p class="labelClass">Destination</p>
+					@inputText(taskForm("destination"),'class -> "textbox_sml", '_label
+					-> "",'_showConstraints -> false)
+				</li>
+				<li>
+					<p class="labelClass">Booking Date</p>
+					@inputText(taskForm("bookingDate"),'class -> "textbox_sml", '_label
+					-> "",'_showConstraints -> false)
+				</li>
+				<li>
+					<p class="labelClass">Unloading Date</p>
+					@inputText(taskForm("unloadingDate"),'class -> "textbox_sml",
+					'_label -> "",'_showConstraints -> false)
+
+				</li>
+				<li>
+					<p class="labelClass">Weight</p>
+					@inputText(taskForm("weight"),'class -> "textbox_sml", '_label ->
+					"",'_showConstraints -> false)
+				</li>
+
+				<li>
+					<p class="labelClass">Freight</p>
+					@inputText(taskForm("freight"),'class -> "textbox_sml", '_label ->
+					"",'_showConstraints -> false)
+				</li>
+
+				<li>
+					<p class="labelClass">Advance</p>
+					@inputText(taskForm("advance"),'class -> "textbox_sml", '_label ->
+					"",'_showConstraints -> false)
+				</li>
+
+				<li>
+					<p class="labelClass">Balance</p>
+					@inputText(taskForm("balance"),'class -> "textbox_sml", '_label ->
+					"",'_showConstraints -> false)
+				</li>
+
+				<li>
+					<p class="labelClass">delieveryCharge</p>
+					@inputText(taskForm("delieveryCharge"),'class -> "textbox_sml",
+					'_label -> "",'_showConstraints -> false)
+				</li>
+
+				<li>
+					<p class="labelClass">Detention</p>
+					@inputText(taskForm("detention"),'class -> "textbox_sml", '_label
+					-> "",'_showConstraints -> false)
+				</li>
+
+				<li>
+					<p class="labelClass">Commision</p>
+					@inputText(taskForm("commision"),'class -> "textbox_sml", '_label
+					-> "",'_showConstraints -> false)
+				</li>
+
+				<li>
+					<p class="labelClass">Hamali</p>
+					@inputText(taskForm("hamali"),'class -> "textbox_sml", '_label ->
+					"",'_showConstraints -> false)
+				</li>
+				<li>
+					<p class="labelClass">Remarks</p>
+					@inputText(taskForm("remarks"),'class -> "textbox_sml", '_label ->
+					"",'_showConstraints -> false)
+				</li>
+			</ul>
+			<p>
+				<input type="submit" value="Submit" class="btn"
+					id="dailyEntrySubmit" />
+			</p>
+
+		</form>
+
+	</div>
+</body>
+</html>

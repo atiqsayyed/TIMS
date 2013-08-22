@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href='@routes.Assets.at("stylesheets/dashboard.css")'
+	rel="stylesheet">
+
+<script src='@routes.Assets.at("javascripts/jquery1.9.js")'
+	type='text/javascript'></script>
+<script src='@routes.Assets.at("javascripts/truckDetails.js")'
+	type='text/javascript'></script>
+
+<title>Manage Truck</title>
+</head>
+<body>
+
+	<div id="header">Dashboard</div>
+	<div id="dashboard">
+	<div id="icons">
+		<div class="dashboardIcon"><a href='@routes.Application.entries' class="dashboard_button_class">DailyEntry</a></div>
+		<div class="dashboardIcon"><a href='@routes.Application.billing' class="dashboard_button_class">Billing</a></div>
+		<div class="dashboardIcon"><a href='@routes.TruckController.index' class="dashboard_button_class">Manage Truck</a></div>
+	 </div> 
+	</div>
+</body>
+</html>
+
