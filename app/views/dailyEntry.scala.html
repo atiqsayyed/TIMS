@@ -16,7 +16,7 @@
 	type='text/javascript'></script>
 <script src='@routes.Assets.at("javascripts/jqueryui.js")'
 	type='text/javascript'></script>
-	<script src='@routes.Assets.at("javascripts/jquery.validate.js")'
+<script src='@routes.Assets.at("javascripts/jquery.validate.js")'
 	type='text/javascript'></script>
 
 <title>Daily Entry</title>
@@ -24,95 +24,137 @@
 <body>
 	<div id="dailyEntry">
 		<div id="header">Daily Entry</div>
-		<form id="dailyEntryForm">
-			<ul>
 
-				<li>
-					<p class="labelClass">Truck Number</p> @select(
-					taskForm("truckNo"), options(),'class -> "textbox_sml",'id -> "truckOptions",
-					'_label -> "" ,'_showConstraints -> false)
-				</li>
-				<li>
-					<p class="labelClass">Source</p>
-					@inputText(taskForm("source"),'class -> "textbox_sml", '_label ->
-					"",'_showConstraints -> false)
-				</li>
-				<li>
-					<p class="labelClass">Destination</p>
-					@inputText(taskForm("destination"),'class -> "textbox_sml", '_label
-					-> "",'_showConstraints -> false)
-				</li>
-				<li>
-					<p class="labelClass">Booking Date</p>
-					@inputText(taskForm("bookingDate"),'class -> "textbox_sml", '_label
-					-> "",'_showConstraints -> false)
-				</li>
-				<li>
-					<p class="labelClass">Unloading Date</p>
-					@inputText(taskForm("unloadingDate"),'class -> "textbox_sml",
-					'_label -> "",'_showConstraints -> false)
+		<div id="entry">
+			<div id="TransportEntry">
+				Transport Entry <img id="TransportEntryImage" class="toggleClass"
+					style="float: right; width: 42px; cursor: pointer; padding-right: 16px;"
+					src="@routes.Assets.at("images/plus.png")">
+			</div>
+			<form id="dailyEntryForm">
+				<ul>
 
-				</li>
-				<li>
-					<p class="labelClass">Weight</p>
-					@inputText(taskForm("weight"),'class -> "textbox_sml", '_label ->
-					"",'_showConstraints -> false)
-				</li>
+					<li>
+						<p class="labelClass">Truck Number</p> @select(
+						taskForm("truckNo"), options(),'class -> "textbox_sml",'id ->
+						"truckOptions", '_label -> "" ,'_showConstraints -> false)
+					</li>
+					<li>
+						<p class="labelClass">Source</p>
+						@inputText(taskForm("source"),'class -> "textbox_sml", '_label ->
+						"",'_showConstraints -> false)
+					</li>
+					<li>
+						<p class="labelClass">Destination</p>
+						@inputText(taskForm("destination"),'class -> "textbox_sml",
+						'_label -> "",'_showConstraints -> false)
+					</li>
+					<li>
+						<p class="labelClass">Booking Date</p>
+						@inputText(taskForm("bookingDate"),'class -> "textbox_sml",
+						'_label -> "",'_showConstraints -> false)
+					</li>
+					<li>
+						<p class="labelClass">Unloading Date</p>
+						@inputText(taskForm("unloadingDate"),'class -> "textbox_sml",
+						'_label -> "",'_showConstraints -> false)
 
-				<li>
-					<p class="labelClass">Freight</p>
-					@inputText(taskForm("freight"),'class -> "textbox_sml", '_label ->
-					"",'_showConstraints -> false)
-				</li>
+					</li>
+					<li>
+						<p class="labelClass">Weight</p>
+						@inputText(taskForm("weight"),'class -> "textbox_sml", '_label ->
+						"",'_showConstraints -> false)
+					</li>
 
-				<li>
-					<p class="labelClass">Advance</p>
-					@inputText(taskForm("advance"),'class -> "textbox_sml", '_label ->
-					"",'_showConstraints -> false)
-				</li>
+					<li>
+						<p class="labelClass">Freight</p>
+						@inputText(taskForm("freight"),'class -> "textbox_sml", '_label ->
+						"",'_showConstraints -> false)
+					</li>
 
-				<li>
-					<p class="labelClass">Balance</p>
-					@inputText(taskForm("balance"),'class -> "textbox_sml", '_label ->
-					"",'_showConstraints -> false)
-				</li>
+					<li>
+						<p class="labelClass">Advance</p>
+						@inputText(taskForm("advance"),'class -> "textbox_sml", '_label ->
+						"",'_showConstraints -> false)
+					</li>
 
-				<li>
-					<p class="labelClass">delieveryCharge</p>
-					@inputText(taskForm("delieveryCharge"),'class -> "textbox_sml",
-					'_label -> "",'_showConstraints -> false)
-				</li>
+					<li>
+						<p class="labelClass">Balance</p>
+						@inputText(taskForm("balance"),'class -> "textbox_sml", '_label ->
+						"",'_showConstraints -> false)
+					</li>
 
-				<li>
-					<p class="labelClass">Detention</p>
-					@inputText(taskForm("detention"),'class -> "textbox_sml", '_label
-					-> "",'_showConstraints -> false)
-				</li>
+					<li>
+						<p class="labelClass">delieveryCharge</p>
+						@inputText(taskForm("delieveryCharge"),'class -> "textbox_sml",
+						'_label -> "",'_showConstraints -> false)
+					</li>
 
-				<li>
-					<p class="labelClass">Commision</p>
-					@inputText(taskForm("commision"),'class -> "textbox_sml", '_label
-					-> "",'_showConstraints -> false)
-				</li>
+					<li>
+						<p class="labelClass">Detention</p>
+						@inputText(taskForm("detention"),'class -> "textbox_sml", '_label
+						-> "",'_showConstraints -> false)
+					</li>
 
-				<li>
-					<p class="labelClass">Hamali</p>
-					@inputText(taskForm("hamali"),'class -> "textbox_sml", '_label ->
-					"",'_showConstraints -> false)
-				</li>
-				<li>
-					<p class="labelClass">Remarks</p>
-					@inputText(taskForm("remarks"),'class -> "textbox_sml", '_label ->
-					"",'_showConstraints -> false)
-				</li>
-			</ul>
-			<p>
-				<input type="submit" value="Submit" class="btn"
-					id="dailyEntrySubmit" />
-			</p>
+					<li>
+						<p class="labelClass">Commision</p>
+						@inputText(taskForm("commision"),'class -> "textbox_sml", '_label
+						-> "",'_showConstraints -> false)
+					</li>
 
-		</form>
+					<li>
+						<p class="labelClass">Hamali</p>
+						@inputText(taskForm("hamali"),'class -> "textbox_sml", '_label ->
+						"",'_showConstraints -> false)
+					</li>
+					<li>
+						<p class="labelClass">Remarks</p>
+						@inputText(taskForm("remarks"),'class -> "textbox_sml", '_label ->
+						"",'_showConstraints -> false)
+					</li>
+				</ul>
 
+				<div id="TruckOwnerEntry">
+					Truck Owner Entry<img id="truckOwnerEntryImage"class="toggleClass"
+					style="float: right; width: 42px; cursor: pointer; padding-right: 16px;"
+					src="@routes.Assets.at("images/plus.png")">
+				</div>
+				<div id="TruckDailyEntryForm">
+					<ul>
+						<li>
+							<p class="labelClass">Freight</p>
+							@inputText(taskForm("ownerFreight"),'class -> "textbox_sml", '_label
+							-> "",'_showConstraints -> false)
+						</li>
+
+						<li>
+							<p class="labelClass">Advance</p>
+							@inputText(taskForm("ownerAdvance"),'class -> "textbox_sml", '_label
+							-> "",'_showConstraints -> false)
+						</li>
+
+						<li>
+							<p class="labelClass">Balance</p>
+							@inputText(taskForm("ownerBalance"),'class -> "textbox_sml", '_label
+							-> "",'_showConstraints -> false)
+						</li>
+
+						<li>
+							<p class="labelClass">Detention</p>
+							@inputText(taskForm("ownerDetention"),'class -> "textbox_sml", '_label
+							-> "",'_showConstraints -> false)
+						</li>
+
+
+					</ul>
+					<p>
+						<input type="submit" value="Submit" class="btn"
+							id="dailyEntrySubmit" />
+					</p>
+				</div>
+			</form>
+		</div>
 	</div>
+
 </body>
 </html>

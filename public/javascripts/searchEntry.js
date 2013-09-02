@@ -1,6 +1,7 @@
 $(document).ready(function() {
  
-	$("#updateEntry").hide()
+	$("#truckDetails").hide();
+	$("#updateEntry").hide();
 
 	function yesnodialog(button1, button2, element) {
 
@@ -52,20 +53,23 @@ $(document).ready(function() {
 		$("#commision").val(entry.commision)
 		$("#hamali").val(entry.hamali)
 		$("#remarks").val(entry.remarks)
-		
+		$("#ownerFreight").val(entry.ownerFreight)
+		$("#ownerAdvance").val(entry.ownerAdvance)
+		$("#ownerBalance").val(entry.ownerBalance)
+		$("#ownerDetention").val(entry.ownerDetention)
 	}
 	
 	$("#truckDetailTable").on('click', '.tableBtn .update', function() {
 	   updateId = $(this).parent().attr('id')
-		alert(updateId)
-		$("#dailyEntry").hide()
-		$("#updateEntry").show()
 		
 		$.ajax({
 			 url : "http://localhost:9000/entries/getEntry/"+updateId,
 			 type : "get",
 			 success : function(data) {
-			     alert("success");
+			     $("#dailyEntry").hide()
+			     $("#updateEntry").show();
+			     $("#dailyEntryForm").show();
+			     $("#header").text("Modify")
 			     populateForm(data);
 			 },
 			 error : function() {
@@ -99,7 +103,7 @@ $(document).ready(function() {
 
 
 	$("#searchSubmit").click(function() {
-		
+		$("#truckDetails").show();
 		$("#truckDetailTable").find("tr:gt(0)").remove();	
 		
 		var from = $("#fromDate").val();
@@ -137,9 +141,7 @@ $(document).ready(function() {
 			data : values,
 			success : function() {
 				alert("Entry updated Successfully");
-				$("#updateEntry").hide()
-				$("#dailyEntry").show()
-				
+				location.reload();
 			},
 			error : function() {
 				alert("failure");

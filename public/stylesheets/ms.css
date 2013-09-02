@@ -93,19 +93,40 @@ td,th {
 	padding: 0 10px;
 	margin-left: 40px;
 	font-size: 16px;
+	margin-bottom: 80px;
 }
 
 .btn:hover,.dashboard_button_class:hover {
 	background: #189acf;
 }
 
-#dashboard,#dailyEntryForm {
+#dashboard {
 	width: 55%;
 	margin: 20px auto;
 	text-align: left;
 	border: 2px solid #005880;
 	box-shadow: 5px 5px 5px #232231;
 	height: 1250px;
+	margin-left: 400px;
+}
+
+#dailyEntryForm,#TruckDailyEntryForm {
+	width: 80%;
+	margin: 20px auto;
+	text-align: left;
+	border: 2px solid #005880;
+	box-shadow: 5px 5px 5px #232231;
+	height: auto;
+	display: none;
+	
+}
+
+#entry {
+	width: 55%;
+	margin: 20px auto;
+	border: 2px solid #005880;
+	box-shadow: 5px 5px 5px #232231;
+	height: auto;
 	margin-left: 400px;
 }
 
@@ -176,4 +197,15 @@ td,th {
 	float: left;
 	padding-left: 19px;
 	cursor: pointer;
+}
+
+#TransportEntry,#TruckOwnerEntry {
+	background: #00c0f2;
+	height: 31px;
+	padding: 18px 0;
+	color: #FFFFFF;
+	font-size: 30px;
+	text-align: center;
+	margin-top: 40px;
+	margin-bottom: 40px;
 }

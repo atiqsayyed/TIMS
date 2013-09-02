@@ -48,6 +48,22 @@ $(document)
 												required : true,
 												digits : true
 											},
+											ownerFreight : {
+												required : true,
+												digits : true
+											},
+											ownerAdvance : {
+												required : true,
+												digits : true
+											},
+											ownerBalance : {
+												required : true,
+												digits : true
+											},
+											ownerDetention : {
+												required : true,
+												digits : true
+											},
 											remarks : "required",
 
 										},
@@ -64,6 +80,10 @@ $(document)
 											delieveryCharge : "<div class='error'>Please enter Delievery Charge & it should be only numbers</div>",
 											detention : "<div class='error'>Please enter detention & it should be only numbers</div>",
 											commision : "<div class='error'>Please enter commision & it should be only numbers</div>",
+											ownerFreight : "<div class='error'>Please enter Freight & it should be only numbers</div>",
+											ownerAdvance : "<div class='error'>Please enter Advance & it should be only numbers</div>",
+											ownerBalance : "<div class='error'>Please enter Balance & it should be only numbers</div>",
+											ownerDetention : "<div class='error'>Please enter detention & it should be only numbers</div>",
 											hamali : "<div class='error'>Please enter Hamali</div>",
 											remarks : "<div class='error'>Please enter Remarks</div>"
 										}
@@ -80,7 +100,7 @@ $(document)
 
 					function addTruckNos() {
 						$.ajax({
-							url : "http://localhost:8080/tims-1.0-SNAPSHOT/truck/truckNos",
+							url : "http://localhost:9000/truck/truckNos",
 							type : "get",
 							success : function(data) {
 								var length = data.length
@@ -119,4 +139,29 @@ $(document)
 						}
 
 					});
+					$(".toggleClass")
+							.click(
+									function() {
+
+										if ($(this).attr("id") == "TransportEntryImage") {
+											$("#dailyEntryForm").slideToggle(
+													400);
+										} else if ($(this).attr("id") == "truckOwnerEntryImage") {
+											$("#TruckDailyEntryForm")
+													.slideToggle(400);
+										}
+
+										if ($(this).attr("src") == "/assets/images/plus.png") {
+											$(this).attr("src",
+													"/assets/images/minus.png")
+										} else {
+											if ($(this).attr("src") == "/assets/images/minus.png") {
+												$(this)
+														.attr("src",
+																"/assets/images/plus.png")
+											}
+										}
+
+									});
+
 				});

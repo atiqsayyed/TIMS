@@ -8,6 +8,7 @@ GET    /                                       controllers.Application.index
 
 # Entries       
 GET    /entries                                controllers.Application.entries
+GET    /entries/searchEntries                  controllers.Application.searchEntries
 GET    /entries/getEntry/:id                   controllers.Application.getEntry(id:Int)
 POST   /entries                                controllers.Application.newEntry
 POST   /entries/delete/:id                     controllers.Application.deleteEntry(id: Int)

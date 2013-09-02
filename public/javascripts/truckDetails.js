@@ -70,7 +70,7 @@ $(document).ready(
 
 			function addTruckNos() {
 				$.ajax({
-					url : "http://localhost:8080/tims-1.0-SNAPSHOT/truck/truckNos",
+					url : "http://localhost:9000/truck/truckNos",
 					type : "get",
 					success : function(data) {
 						var length = data.length

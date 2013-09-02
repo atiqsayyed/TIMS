@@ -30,6 +30,11 @@ object Application extends Controller {
     //    Ok(views.html.index(DailyEntry.all(), entryForm))
     Ok(views.html.dailyEntry(entryForm))
   }
+  
+  def searchEntries = Action {
+    //    Ok(views.html.index(DailyEntry.all(), entryForm))
+    Ok(views.html.searchEntry())
+  }
 
   def generateBill(truckNo: String, startDate: String, endDate: String) = Action {
     implicit val billingWrites = Json.writes[Billing]
@@ -51,7 +56,8 @@ object Application extends Controller {
         Redirect(routes.Application.index)
       })
   }
-
+  
+ 
   def deleteEntry(id: Int) = Action {
     println("In deleteEntry Application " + id)
     DailyEntry.delete(id)
@@ -83,6 +89,10 @@ object Application extends Controller {
       "detention" -> number,
       "commision" -> number,
       "hamali" -> number,
-      "remarks" -> nonEmptyText)(DailyEntry.apply)(DailyEntry.unapply))
+      "remarks" -> nonEmptyText,
+      "ownerFreight" -> number,
+      "ownerAdvance" -> number,
+      "ownerBalance" -> number,
+      "ownerDetention" -> number)(DailyEntry.apply)(DailyEntry.unapply))
 
 }

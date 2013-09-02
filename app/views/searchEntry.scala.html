@@ -17,9 +17,8 @@
 <title>Search Entry</title>
 </head>
 <body>
-
+	<div id="header">Search</div>
 	<div id="dailyEntry">
-		<div id="header">Search</div>
 		<div id="billingFilter">
 			<ul>
 				<li>
@@ -59,60 +58,94 @@
 			</table>
 		</div>
 	</div>
-	
-	<div id="updateEntry">
-	  <form id="dailyEntryForm" enctype="application/x-www-form-urlencoded">
-          <ul>
-        		<li> <p class="labelClass" > Truck Number </p>
-        			 <input type="text" name="truckNo" class="textbox_sml" id="truckNo"/>
-        		</li>
-        		<li> <p class="labelClass" > Source </p>
-        			 <input type="text" name="source" class="textbox_sml" id="source"/>
-        		</li>
-        		<li> <p class="labelClass" > Destination </p>
-        			 <input type="text" name="destination" class="textbox_sml" id="destination"/>
-        		</li>
-        		<li> <p class="labelClass" > Booking Date </p>
-        			 <input type="text" name="bookingDate" class="textbox_sml" id="bookingDate"/>
-        		</li>
-        		<li> <p class="labelClass"> Unloading Date </p>
-        			 <input type="text" name="unloadingDate" class="textbox_sml" id="unloadingDate"/>
-        			 
-        		</li>
-        		<li> <p class="labelClass" > Weight </p>
-        			 <input type="text" name="weight" class="textbox_sml" id="weight"/>
-        		</li>
-        		
-        		<li> <p class="labelClass"> Freight </p>
-        			 <input type="text" name="freight" class="textbox_sml" id="freight"/>
-        		</li>
-        		
-        		<li> <p class="labelClass"> Advance </p>
-        			 <input type="text" name="advance" class="textbox_sml" id="advance"/>
-        		</li>
-        		<li> <p class="labelClass"> Balance </p>
-        			 <input type="text" name="balance" class="textbox_sml" id="balance"/>
-        		</li>
-        		<li> <p class="labelClass">Delievery Charge</p>
-        			 <input type="text" name="delieveryCharge" class="textbox_sml" id="delieveryCharge"/>
-        		</li>
-        		<li> <p class="labelClass"> Detention </p>
-        			 <input type="text" name="detention" class="textbox_sml" id="detention"/>
-        		</li>
-        		<li> <p class="labelClass"> Commision </p>
-        			 <input type="text" name="commision" class="textbox_sml" id="commision"/>
-        		</li>
-        		<li> <p class="labelClass"> Hamali </p>
-        			 <input type="text" name="hamali" class="textbox_sml" id="hamali"/>
-        		</li>
-        		<li> <p class="labelClass"> Remarks </p>
-        			 <input type="text" name="remarks" class="textbox_sml" id="remarks"/>
-        		</li>
-        	</ul>	
-           <p>	<input type="submit" value="Submit" class="btn" id="updateEntrySubmit" /></p>
 
-        </form>
-	
+	<div id="updateEntry">
+		<form id="dailyEntryForm" enctype="application/x-www-form-urlencoded">
+			<ul>
+				<li>
+					<p class="labelClass">Truck Number</p> <input type="text"
+					name="truckNo" class="textbox_sml" id="truckNo" />
+				</li>
+				<li>
+					<p class="labelClass">Source</p> <input type="text" name="source"
+					class="textbox_sml" id="source" />
+				</li>
+				<li>
+					<p class="labelClass">Destination</p> <input type="text"
+					name="destination" class="textbox_sml" id="destination" />
+				</li>
+				<li>
+					<p class="labelClass">Booking Date</p> <input type="text"
+					name="bookingDate" class="textbox_sml" id="bookingDate" />
+				</li>
+				<li>
+					<p class="labelClass">Unloading Date</p> <input type="text"
+					name="unloadingDate" class="textbox_sml" id="unloadingDate" />
+
+				</li>
+				<li>
+					<p class="labelClass">Weight</p> <input type="text" name="weight"
+					class="textbox_sml" id="weight" />
+				</li>
+
+				<li>
+					<p class="labelClass">Freight</p> <input type="text" name="freight"
+					class="textbox_sml" id="freight" />
+				</li>
+
+				<li>
+					<p class="labelClass">Advance</p> <input type="text" name="advance"
+					class="textbox_sml" id="advance" />
+				</li>
+				<li>
+					<p class="labelClass">Balance</p> <input type="text" name="balance"
+					class="textbox_sml" id="balance" />
+				</li>
+				<li>
+					<p class="labelClass">Delievery Charge</p> <input type="text"
+					name="delieveryCharge" class="textbox_sml" id="delieveryCharge" />
+				</li>
+				<li>
+					<p class="labelClass">Detention</p> <input type="text"
+					name="detention" class="textbox_sml" id="detention" />
+				</li>
+				<li>
+					<p class="labelClass">Commision</p> <input type="text"
+					name="commision" class="textbox_sml" id="commision" />
+				</li>
+				<li>
+					<p class="labelClass">Hamali</p> <input type="text" name="hamali"
+					class="textbox_sml" id="hamali" />
+				</li>
+				<li>
+					<p class="labelClass">Remarks</p> <input type="text" name="remarks"
+					class="textbox_sml" id="remarks" />
+				</li>
+				<li>
+					<p class="labelClass">Owner Freight</p> <input type="text"
+					name="ownerFreight" class="textbox_sml" id="ownerFreight" />
+				</li>
+
+				<li>
+					<p class="labelClass">Owner Advance</p> <input type="text"
+					name="ownerAdvance" class="textbox_sml" id="ownerAdvance" />
+				</li>
+				<li>
+					<p class="labelClass">Owner Balance</p> <input type="text"
+					name="ownerBalance" class="textbox_sml" id="ownerBalance" />
+				</li>
+				<li>
+					<p class="labelClass">Owner Detention</p> <input type="text"
+					name="ownerDetention" class="textbox_sml" id="ownerDetention" />
+				</li>
+			</ul>
+			<p>
+				<input type="submit" value="Submit" class="btn"
+					id="updateEntrySubmit" />
+			</p>
+
+		</form>
+
 	</div>
 
 </body>
