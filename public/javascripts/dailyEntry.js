@@ -100,7 +100,7 @@ $(document)
 
 					function addTruckNos() {
 						$.ajax({
-							url : "http://localhost:9000/truck/truckNos",
+							url : "http://localhost:8080/tims-1.0-SNAPSHOT/truck/truckNos",
 							type : "get",
 							success : function(data) {
 								var length = data.length
@@ -126,7 +126,7 @@ $(document)
 							console.log("Values are " + values);
 
 							$.ajax({
-								url : "http://localhost:9000/entries",
+								url : "http://localhost:8080/tims-1.0-SNAPSHOT/entries",
 								type : "post",
 								data : values,
 								success : function() {

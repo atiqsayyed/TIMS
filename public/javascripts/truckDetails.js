@@ -51,7 +51,7 @@ $(document).ready(
 			$("#editTruckSubmit").click(function() {
 				var truckNo = $("#editTruckOption").val()
 				$.ajax({
-					url : "http://localhost:9000/truck/getTruck/" + truckNo,
+					url : "http://localhost:8080/tims-1.0-SNAPSHOT/truck/getTruck/" + truckNo,
 					type : "get",
 					success : function(data) {
 						$("#editTruckNo").val(data.truckNo)
@@ -70,7 +70,7 @@ $(document).ready(
 
 			function addTruckNos() {
 				$.ajax({
-					url : "http://localhost:9000/truck/truckNos",
+					url : "http://localhost:8080/tims-1.0-SNAPSHOT/truck/truckNos",
 					type : "get",
 					success : function(data) {
 						var length = data.length
@@ -94,7 +94,7 @@ $(document).ready(
 					var values = $(this).serialize();
 
 					$.ajax({
-						url : "http://localhost:9000/truck/addTruck",
+						url : "http://localhost:8080/tims-1.0-SNAPSHOT/truck/addTruck",
 						type : "post",
 						data : values,
 						success : function() {
@@ -112,7 +112,7 @@ $(document).ready(
 				var truckNo = $("#truckOption").val()
 				console.log("no " + truckNo)
 				$.ajax({
-					url : "http://localhost:9000/truck/delete/" + truckNo,
+					url : "http://localhost:8080/tims-1.0-SNAPSHOT/truck/delete/" + truckNo,
 					type : "post",
 					success : function() {
 						alert("Deleted Successfully!!. .")
@@ -129,7 +129,7 @@ $(document).ready(
 				var values = $(this).serialize();
 
 				$.ajax({
-					url : "http://localhost:9000/truck/update/" + truckNo,
+					url : "http://localhost:8080/tims-1.0-SNAPSHOT/truck/update/" + truckNo,
 					type : "post",
 					data : values,
 					success : function() {

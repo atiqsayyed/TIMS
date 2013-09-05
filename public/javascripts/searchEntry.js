@@ -11,7 +11,7 @@ $(document).ready(function() {
 			var id = element.parent().attr('id')
 			var data = {"entry_id" : id};
 			$.ajax({
-			 url : "http://localhost:9000/entries/delete/"+id,
+			 url : "http://localhost:8080/tims-1.0-SNAPSHOT/entries/delete/"+id,
 			 type : "post",
 			 success : function() {
 				 element.parent().parent().remove();
@@ -63,7 +63,7 @@ $(document).ready(function() {
 	   updateId = $(this).parent().attr('id')
 		
 		$.ajax({
-			 url : "http://localhost:9000/entries/getEntry/"+updateId,
+			 url : "http://localhost:8080/tims-1.0-SNAPSHOT/entries/getEntry/"+updateId,
 			 type : "get",
 			 success : function(data) {
 			     $("#dailyEntry").hide()
@@ -111,14 +111,14 @@ $(document).ready(function() {
 		var truck_no = $("#truckOption").val();
 		$.ajax({
 			type : 'Get',
-			url : "http://localhost:9000/billing/" + truck_no + "/" + toyymmdd(from) + "/" + toyymmdd(to),
+			url : "http://localhost:8080/tims-1.0-SNAPSHOT/billing/" + truck_no + "/" + toyymmdd(from) + "/" + toyymmdd(to),
 			success : function(data) {
 				billingObject = data;
 				var length = billingObject.length;
 
 				for (var i = 0; i < length; i++) {
-					$("#truckDetailTable").append("<tr><td>" + (i + 1) + "</td>" + "<td>" + getConvertedDate(billingObject[i].bookingDate) + "</td>" + "<td>" + billingObject[i].source + "</td>" + "<td>" + billingObject[i].destination + "</td>" + "<td>" + billingObject[i].freight + "</td>" + "<td>" + billingObject[i].advance + "</td>" + "<td>" + billingObject[i].commision + "</td>" + "<td>" + billingObject[i].hamali + "</td><td  id=" + billingObject[i].entry_id + " class=tableBtn ><img id=" + i + " src=/assets/images/update.png class=update>"+
-							"<img id=" + i + " src=/assets/images/delete.png class=delete></td></tr>");
+					$("#truckDetailTable").append("<tr><td>" + (i + 1) + "</td>" + "<td>" + getConvertedDate(billingObject[i].bookingDate) + "</td>" + "<td>" + billingObject[i].source + "</td>" + "<td>" + billingObject[i].destination + "</td>" + "<td>" + billingObject[i].freight + "</td>" + "<td>" + billingObject[i].advance + "</td>" + "<td>" + billingObject[i].commision + "</td>" + "<td>" + billingObject[i].hamali + "</td><td  id=" + billingObject[i].entry_id + " class=tableBtn ><img id=" + i + " src=/tims-1.0-SNAPSHOT/assets/images/update.png class=update>"+
+							"<img id=" + i + " src=/tims-1.0-SNAPSHOT/assets/images/delete.png class=delete></td></tr>");
 				}
 
 			},
@@ -132,11 +132,9 @@ $(document).ready(function() {
 	
 	$("#dailyEntryForm").submit(function(event) {
 		event.preventDefault();
-
 		var values = $(this).serialize();
-
 		$.ajax({
-			url : "http://localhost:9000/entries/update/"+updateId,
+			url : "http://localhost:8080/tims-1.0-SNAPSHOT/entries/update/"+updateId,
 			type : "post",
 			data : values,
 			success : function() {

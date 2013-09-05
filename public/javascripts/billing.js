@@ -4,6 +4,10 @@
 
 $(document).ready(function(){
 	
+	$("#printPage").click(function(){
+		$('#billingSummary').printElement();
+	});
+	
 	$("#modifyDiv").hide();
 	$("#truckDetails").hide();
 	
@@ -12,7 +16,7 @@ $(document).ready(function(){
 	
 	function addTruckNos() {
 		$.ajax({
-			url : "http://localhost:9000/truck/truckNos",
+			url : "http://localhost:8080/tims-1.0-SNAPSHOT/truck/truckNos",
 			type : "get",
 			success : function(data) {
 				var length = data.length
@@ -42,7 +46,7 @@ $(document).ready(function(){
 		var truck_no = $("#truckOption").val();
 		 $.ajax({
 			 type:'Get',
-			 url:"http://localhost:9000/billing/"+truck_no+"/"+toyymmdd(from)+"/"+toyymmdd(to),
+			 url:"http://localhost:8080/tims-1.0-SNAPSHOT/billing/"+truck_no+"/"+toyymmdd(from)+"/"+toyymmdd(to),
 			 success:function(data) {
 				 $("#truckDetails").show();
 					 var billingObject =data;
@@ -56,10 +60,10 @@ $(document).ready(function(){
 					 var advance = add(length, 5);
 					 var commision = add(length, 6);
 					 var hamali = add(length, 7);
-					 $("#truckDetails").append("<p>Total Freight = "+freight+"</p>");
-					 $("#truckDetails").append("<p >Total Advance = "+advance+"</p>");
-					 $("#truckDetails").append("<p> Total Commision = "+commision+"</p>");
-					 $("#truckDetails").append("<p> Total Hamali = "+hamali+"</p>");
+					 $("#billingSummary").append("<p>Total Freight = "+freight+"</p>");
+					 $("#billingSummary").append("<p >Total Advance = "+advance+"</p>");
+					 $("#billingSummary").append("<p> Total Commision = "+commision+"</p>");
+					 $("#billingSummary").append("<p> Total Hamali = "+hamali+"</p>");
 			 },
 			 error:function(){
 		          alert("failure");
@@ -98,7 +102,7 @@ $(document).ready(function(){
 
 		$.ajax({
 			 type:'Get',
-			 url:'http://localhost:8080/TIMS/rest/deleteEntry/'+id,
+			 url:'http://localhost:8080/TIMS/deleteEntry/'+id,
 			 success:function(data) {
 				 alert("Record deleted Successfully!!");
 			 },
@@ -123,7 +127,7 @@ $(document).ready(function(){
 		values.push({name:"UnloadingDate", value:UnloadingDate});
 		
 		$.ajax({
-		      url: "http://localhost:8080/TIMS/rest/UpdateEntry/update",
+		      url: "http://localhost::8080/tims-1.0-SNAPSHOT/UpdateEntry/update",
 		      type: "POST",
 		      data: values,
 		      success: function(){
@@ -134,10 +138,6 @@ $(document).ready(function(){
 		      }   
 		    });
 	});
-	
-
-	
-
 	
 	function getConvertedDate(date){
 		var convertedDate = new Date(date)
